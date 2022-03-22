@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Stop Holy War',
   tagline: 'Остановлю холивар в своей голове и, может быть, в IT сообществе',
-  url: 'https://shw.netlify.io',
+  url: 'https://stopholywar.netlify.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
