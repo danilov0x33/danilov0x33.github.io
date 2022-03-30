@@ -33,7 +33,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        googleAnalytics: {
+        gtag: {
           trackingID: 'G-VSWPZJVMRD',
           anonymizeIP: true,
         },
@@ -64,7 +64,7 @@ const config = {
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'Stop Holy War',
@@ -77,7 +77,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Danger Zone'
+            label: 'Holy War Zone'
           },
           {
             to: '/blog',
@@ -85,8 +85,8 @@ const config = {
             position: 'left'
           },
           {
-            to: '/about',
-            label: 'Об авторе',
+            to: '/portfolio',
+            label: 'Портфолио',
             position: 'right'
           },
         ],
@@ -111,8 +111,12 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'Об авторе',
-                to: '/about',
+                label: 'Портфолио',
+                to: '/portfolio',
+              },
+              {
+                label: 'Контакты',
+                to: '/portfolio#contacts',
               }
             ],
           },
