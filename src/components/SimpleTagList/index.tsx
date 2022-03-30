@@ -11,11 +11,14 @@ type SimpleTagListProps = {
 export default function SimpleTagList({tags, permalink = '/blog/tags/'}: SimpleTagListProps): JSX.Element {
   return (
     <ul className={clsx(tagStyles.tags, 'padding--none', 'margin-left--sm')}>
-      {tags.map(tag => (
-        <li key={permalink + tag} className={tagStyles.tag}>
-          <Tag name={tag} permalink={permalink + tag.toLowerCase()} />
-        </li>
-      ))}
+      {tags.map(tag => {
+        const formattedTag = tag.toLowerCase().replace(' ', '-');
+        return (
+          <li key={permalink + formattedTag} className={tagStyles.tag}>
+            <Tag name={tag} permalink={permalink + formattedTag}/>
+          </li>
+        )
+      })}
     </ul>
   );
 }
