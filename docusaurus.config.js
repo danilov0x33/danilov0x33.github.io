@@ -33,10 +33,6 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        gtag: {
-          trackingID: '3374599515',
-          anonymizeIP: false,
-        },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
         },
@@ -48,7 +44,7 @@ const config = {
           blogSidebarCount: 0,
           showReadingTime: true,
           readingTime: ({content, frontMatter, defaultReadingTime}) =>
-              frontMatter.reading_time ? frontMatter.reading_time : defaultReadingTime({content}),
+            frontMatter.reading_time ? frontMatter.reading_time : defaultReadingTime({content}),
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -58,7 +54,7 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       autoCollapseSidebarCategories: true,
       colorMode: {
@@ -127,7 +123,15 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      tagManager: {
+        trackingID: 'GTM-PWTQJDM'
+      }
     }),
+  plugins: [
+    [
+      '@ionic-internal/docusaurus-plugin-tag-manager', {},
+    ],
+  ],
 };
 
 module.exports = config;
