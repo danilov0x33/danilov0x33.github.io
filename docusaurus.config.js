@@ -10,7 +10,7 @@ const config = {
   tagline: 'Остановлю холивар в своей голове и, может быть, в IT сообществе',
   url: 'https://stopholywar.netlify.app/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'danilov0x33',
