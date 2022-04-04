@@ -35,6 +35,9 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          exclude: [
+            "**/todo_*.{js,jsx,ts,tsx,md,mdx}"
+          ]
         },
         blog: {
           feedOptions: {
